@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fictional recommendation demo</title><style>
+body{font:15px/1.55 system-ui,sans-serif;color:#17243a;margin:0;padding:20px;background:#f8fafc}h2{margin:0 0 6px}.muted{color:#64748b}.controls{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}select,button{padding:9px 12px;border:1px solid #cbd5e1;border-radius:8px;background:white}button{cursor:pointer;background:#17365d;color:white}.card{background:white;border:1px solid #dbe3ed;border-radius:10px;padding:14px;margin:10px 0}.pill{font-size:12px;background:#e8eef7;padding:3px 8px;border-radius:20px}.note{font-size:13px;background:#fff7e6;border-left:3px solid #b7791f;padding:10px;margin:12px 0}
+</style></head><body><h2>Fictional recommendation preview</h2><p class="muted">A small static illustration of goal-aware ranking. All items and scores are invented for demonstration; this is not the FastAPI model or a validated recommender.</p>
+<div class="note">No accounts, tracking, backend calls or real user data. The synthetic safety label is illustrative, not a moderation classifier.</div>
+<div class="controls"><label>Current goal <select id="goal"><option value="learn">Learn something</option><option value="relax">Relax</option><option value="create">Create something</option></select></label><button id="refresh">Update recommendations</button></div><div id="feed"></div>
+<script>
+const items=[
+ {title:"A short science explainer",topic:"science",tags:["learn","create"],safe:true,why:"Matches a learning goal and introduces a new topic."},
+ {title:"A beginner drawing prompt",topic:"art",tags:["create","relax"],safe:true,why:"Supports creative exploration without requiring a long session."},
+ {title:"A calm nature photo story",topic:"nature",tags:["relax","learn"],safe:true,why:"Offers a lower-intensity option and a different topic."},
+ {title:"A repeated high-arousal clip",topic:"clips",tags:["relax"],safe:false,why:"Excluded by the demo's fictional eligibility rule."},
+ {title:"A practical history timeline",topic:"history",tags:["learn"],safe:true,why:"Relevant to the selected goal and distinct from the other topics."}
+];
+function render(){const g=document.getElementById("goal").value;const selected=items.filter(x=>x.safe).map(x=>({...x,score:x.tags.includes(g)?3:1})).sort((a,b)=>b.score-a.score);document.getElementById("feed").innerHTML=selected.map((x,i)=>'<div class="card"><span class="pill">Rank '+(i+1)+'</span> <span class="pill">'+x.topic+'</span><h3>'+x.title+'</h3><div class="muted">'+x.why+'</div></div>').join("")}
+document.getElementById("refresh").addEventListener("click",render);document.getElementById("goal").addEventListener("change",render);render();
+</script></body></html>
