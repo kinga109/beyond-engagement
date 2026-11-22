@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Beyond Engagement | Independent Research</title>
+<meta name="description" content="Independent synthetic research case study on user-goal-aligned recommendations, evaluator integrity and monitoring.">
+<style>
+:root{--ink:#17243a;--muted:#59677b;--line:#dce3ed;--paper:#fff;--bg:#f4f7fb;--navy:#10213b;--blue:#24518a;--gold:#9a671a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+header{background:var(--navy);color:white;padding:68px 22px}header .wrap,main,footer{max-width:1020px;margin:auto}
+.eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:#b9cce5;font-weight:700}
+h1{font-size:clamp(38px,6vw,60px);line-height:1.04;margin:15px 0;max-width:850px}
+header p{max-width:780px;color:#d5e1f1;font-size:18px}.links a{display:inline-block;margin:8px 10px 0 0;padding:9px 15px;border:1px solid #a6bbd5;border-radius:8px;color:white;text-decoration:none}
+main{padding:28px 20px 70px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;margin:16px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.metric{font-size:29px;font-weight:750;color:var(--blue)}
+h2{font-size:26px;margin:10px 0}h3{margin:5px 0}.muted{color:var(--muted)}.warning{background:#fff8e9;border-left:4px solid var(--gold);padding:12px 16px}
+.tag{display:inline-block;background:#eaf0f7;padding:4px 9px;border-radius:20px;font-size:12px}
+a{color:var(--blue)}iframe{width:100%;height:620px;border:1px solid var(--line);border-radius:10px;background:white}
+footer{border-top:1px solid var(--line);padding:24px 20px;color:var(--muted)}
+li{margin:7px 0}@media(max-width:600px){header{padding:48px 20px}iframe{height:720px}}
+</style></head><body>
+<header><div class="wrap"><div class="eyebrow">Independent product & research case study · Synthetic evidence</div>
+<h1>Beyond Engagement</h1>
+<p>Designing and stress-testing user-goal-aligned recommendation systems for teen-facing contexts.</p>
+<p>This project asks how recommendation systems can respect a person's current goal, context, agency and safety—and how the systems measuring recommendation quality can themselves fail.</p>
+<div class="links"><a href="#findings">Explore findings</a><a href="#demo">Try fictional demo</a><a href="https://github.com/kinga109/beyond-engagement">GitHub repository</a></div>
+</div></header>
+<main>
+<section class="panel"><span class="tag">Project status</span><h2>What this work is—and is not</h2>
+<p>This is independent portfolio research. It is not sponsored by Meta, does not use Meta internal data, and does not describe any platform's production systems.</p>
+<div class="warning"><b>Evidence boundary:</b> All reported experiments are synthetic offline simulations. No teenagers or other human participants, real user data, production telemetry, or live platform systems were involved. No human evaluation has been conducted. The prototype uses fictional deterministic fixtures.</div></section>
+<section class="panel"><h2>Research question</h2><p><b>How might a recommendation system serve a user's explicitly stated goal while respecting safety constraints, uncertainty, user control, and the reliability limits of its own measurement process?</b></p>
+<p class="muted">The project explores a shift from engagement maximization toward context-aware, user-goal-aligned optimization under safety and well-being constraints.</p></section>
+<section class="grid">
+<div class="panel"><div class="metric">V5.30</div><h3>Final planned synthetic cycle</h3><p class="muted">Ranking, uncertainty, monitoring, evaluator integrity, adversarial robustness and fallback stress tests.</p></div>
+<div class="panel"><div class="metric">12 / 12</div><h3>Local automated tests</h3><p class="muted">Windows test run: 12 passed, 1 deprecation warning, 22 November 2026. This is software verification, not real-world validation.</p></div>
+<div class="panel"><div class="metric">0</div><h3>Human participants</h3><p class="muted">No human evaluation has been conducted. Adult expert review is pending.</p></div></section>
+<section id="findings" class="panel"><h2>Key lessons from the simulations</h2><ul>
+<li>Optimizing an objective does not guarantee that the objective is correctly understood.</li>
+<li>Automated evaluators can reward presentation cues without improving underlying synthetic utility.</li>
+<li>Benchmark coverage, evaluator integrity and monitoring quality are separate problems.</li>
+<li>Monitoring can be attacked; fallback systems can inherit the same proxy weaknesses.</li>
+<li>More feedback or online calibration is not automatically better.</li>
+<li>Safety constraints should not be treated as interchangeable with ordinary relevance scores.</li>
+</ul><p><b>Central conclusion:</b> recommendation quality, user-intent understanding, evaluator integrity, benchmark coverage and monitoring burden must be treated as distinct design and measurement problems.</p></section>
+<section class="panel"><h2>Methods and limitations</h2><p>The programme used synthetic candidate items, simulated goals, constructed latent utility functions, scenario-level splits, paired comparisons, counterfactual style manipulations, adversarial test worlds and monitoring simulations. Historical split/provenance limitations are documented in the audit register. A V5.13 result-record conflict remains unresolved and must not be presented as settled.</p><p>These findings do not establish real teen preferences, mental-health outcomes, causal benefit, production safety or deployment readiness. The synthetic safety filter is not a real moderation system.</p><p>Read the <a href="https://github.com/kinga109/beyond-engagement/tree/main/research">research reports and audit files</a> before citing any result.</p></section>
+<section id="demo" class="panel"><h2>Interactive demonstration</h2><p class="muted">Static fictional-data preview. It runs in the browser, makes no backend calls and does not collect data.</p><iframe src="demo.html" title="Beyond Engagement fictional recommendation demonstration"></iframe></section>
+<section class="panel"><h2>Independent adult review</h2><p>Adult professionals are invited to critique the research framing, experimental claims, rubric, evaluator-invariance tests and prototype usability. Participation is voluntary. Reviewers are not asked to certify safety or endorse the thesis. No reviewer feedback is represented as received until it is actually submitted and documented.</p><p>Any future research involving minors would require a separate ethics-reviewed protocol, applicable local approvals, guardian permission where required, teen assent, privacy protections, safeguarding and voluntary withdrawal.</p></section>
+<section class="panel"><h2>Project materials</h2><ul><li><a href="https://github.com/kinga109/beyond-engagement/blob/main/research/FINAL_RESEARCH_REPORT.md">Final research report</a></li><li><a href="https://github.com/kinga109/beyond-engagement/blob/main/research/PORTFOLIO_CASE_STUDY.md">Portfolio case study</a></li><li><a href="https://github.com/kinga109/beyond-engagement/blob/main/research/PRODUCT_REQUIREMENTS_DOCUMENT.md">Product requirements document</a></li><li><a href="https://github.com/kinga109/beyond-engagement/tree/main/review">Adult expert review materials</a></li></ul></section>
+</main><footer>Independent research portfolio · Synthetic evidence only · 22 November 2026</footer></body></html>
