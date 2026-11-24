@@ -1,0 +1,33 @@
+# SHA-256 checksums — verified source archive subset
+
+Generated 2026-11-24 from the exact original ZIP bytes materialized from the project archive library. The source ZIP files were not modified. All five archives passed `unzip -t` integrity testing locally.
+
+```text
+a33142f9c994775f082daec51776afc62755e8fb8e86ee102bf6ba90193be60e  V5_26_evaluator_gaming_and_benchmark_leakage.zip (424991 bytes)
+1a959b47ca00e8fe845eb9b43ee939c77c845aed127a9c9a86beda3ad081bd98  V5_27_adversarial_counterfactual_evaluator.zip (1891515 bytes)
+15a6c99cb9cf4aac3665173273e29f01e79cc2e7bd1a833c424e7abc803d0fff  V5_28_adaptive_evaluator_redteaming.zip (24505627 bytes)
+e1c9dcadfbb7fc47fb0ba10073d7b1c60e85c30069413d695c0d1a4b67a352a0  V5_29_adaptive_redteam_evasion.zip (11040935 bytes)
+d6e7125a2a3413bae40fd5d5e9fc5648be3b3c43fec6f0a70ff9d1c737e82d54  V5_30_proxy_independent_fallbacks.zip (11915300 bytes)
+```
+
+## Scope and limitations
+- These hashes identify the exact source ZIP bytes held in the project library at calculation time.
+- This is a partial checksum manifest for V5.26–V5.30, not a complete V5.5–V5.30 archive manifest.
+- The archives have not yet been uploaded as public downloadable release assets.
+- No independent HTTP download comparison has been performed; therefore these are source-file hashes, not release-download verification.
+- Each ZIP contains its own internal SHA256SUMS file; those internal manifests were not substituted for these outer-archive hashes.
+
+## Independent verification after publication
+Download each public release asset, then run:
+
+PowerShell:
+```powershell
+Get-FileHash .\V5_30_proxy_independent_fallbacks.zip -Algorithm SHA256
+```
+
+macOS/Linux:
+```bash
+sha256sum V5_30_proxy_independent_fallbacks.zip
+```
+
+Compare the output character-for-character with the corresponding line above. Do not report a match until the public asset has been downloaded separately and compared.
